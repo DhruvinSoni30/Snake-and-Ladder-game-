@@ -40,15 +40,10 @@ public class SnakeAndLadder {
      {
          int n = 0;
          Random rnd = new Random();
-         n = rnd.nextInt(7);
-         if(n==0)
-         {
-             return 1;
-         }
-         else
-         {
-             return n;
-         }
+         n = rnd.nextInt(6);
+         n = n+1;
+         System.out.println("You Got:"+n);
+         return n;
      }
     public void startGame()
 	{
@@ -87,7 +82,7 @@ public class SnakeAndLadder {
 				{
 					System.out.println("Second player wins");
 					return;
-				}
+                                }
 			}
 			
 			currentvalue= -currentvalue;
@@ -114,7 +109,7 @@ public class SnakeAndLadder {
        
        if(null != ladder.get(player))
        {
-           System.out.println("Snake is here");
+           System.out.println("Ladder is here");
            player = ladder.get(player);
        }
        return player;
